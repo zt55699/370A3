@@ -26,3 +26,7 @@ the other functions in the program are not needed for practicing but if you want
 
 # Functions
 Read the print statements and the code. I can show you guys on Friday if you are having issues with this.
+
+# Using script file
+Make sure to be in the directory where the init.sql file is located. Enter the psql db then type \i init.sql 
+You will see tables being dropped if they existed before and then the tables will be created. 
