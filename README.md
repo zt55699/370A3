@@ -23,3 +23,6 @@ you can now practice sql queries on your student.
 if you use mockaroo you will notice they will add a header line above the data, when i wrote the program i didn't account for this for so make sure to remove the first line if you want to use files from mockaroo.
 
 the other functions in the program are not needed for practicing but if you want i will have information on how to run them soon.
+
+# Functions
+Read the print statements and the code. I can show you guys on Friday if you are having issues with this.
