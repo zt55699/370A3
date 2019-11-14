@@ -14,11 +14,11 @@ class Table(Enum):
 
 def build_db(connection:object) -> None:
     cursor = connection.cursor()
-    print(connection.get_dsn_parameters(), "\n")
+    # print(connection.get_dsn_parameters(), "\n")
 
-    cursor.execute("SELECT version();")
-    record = cursor.fetchone()
-    print("You are connected to - ", record, "\n")
+    # cursor.execute("SELECT version();")
+    # record = cursor.fetchone()
+    # print("You are connected to - ", record, "\n")
     table_create_list = []
     
 
@@ -288,17 +288,19 @@ def main():
     port as listed
     database = your netlinkid or "five_guys"
     """
-    user = "alecyang" 
-    password = "Apple1337"
-    host = "studentdb1.csc.uvic.ca"
-    port = "5432"
-    database = "five_guys"
+    # user = "alecyang" 
+    # password = "Apple1337"
+    # host = "studentdb1.csc.uvic.ca"
+    # port = "5432"
+    # database = "five_guys"
+    info = read_input_file("db.config")[0]
+    print(info)
     try:
-        connection = psycopg2.connect(user=user,
-                                      password=password,
-                                      host=host,
-                                      port=port,
-                                      database=database)
+        connection = psycopg2.connect(user=info[0],
+                                      password=info[1],
+                                      host=info[2],
+                                      port=info[3],
+                                      database=info[4])
         
         # check what command is, if it is None or not one of the commands then repeat
         print("Welcome to this helper program for the five_guys' PostgreSQL Database project.")
