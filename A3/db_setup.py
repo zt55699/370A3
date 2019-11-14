@@ -226,12 +226,14 @@ def get_attribute(cursor:object, table:str, flag:int = 0) -> str or list:
 def update_tables(connection:object) -> None:
     
     cursor = connection.cursor()
+    print("Pick the table that you want to update:")
     table = get_table(cursor)
+    print("Pick the attribute you want to update:")
     attribute = get_attribute(cursor, table)
     
-    print("Please enter the name of the attribute in the table you want to use WHERE on")
+    print("Please enter the name of the attribute in the table you want to use WHERE on (if the attribute is Name type Ben)")
     attribute_in_table = input()
-    print("Please enter your what you want to change: (attribute = 'something')")
+    print("Please enter what you want to change: (attribute = 'something')")
     user_query = input()
     cursor.execute("""UPDATE {0}
         SET {1}
