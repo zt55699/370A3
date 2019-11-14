@@ -1,15 +1,15 @@
 # 370A3
 psql assignment 
 
-#CONFIG FILE
+# CONFIG FILE
 Input your credentials to log into your database, the config file has hints, just replace the hints with you information.
 
-#GETTING THE FILES TO THE LINUX SERVERS
+# GETTING THE FILES TO THE LINUX SERVERS
 make sure all the files from github are in a single folder then execute the following command in the directory with the folder:
-scp -r FOLDERNAME NETLINKID@linux.csc.uvic.ca:/home/NETLINKID
+scp -r FOLDERNAME NETLINK_ID@linux.csc.uvic.ca:/home/NETLINK_ID
 
 if this is your first time type yes and then enter your netlinkid password
-#RUNNING THE BASIC FILE TO 
+# RUNNING THE BASIC FILE TO 
 when you are in: cd FOLDERNAME
 then type: python3 db_setup.py
 make sure you updated the config file with your information. 
